@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/16 14:30:00 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/18 16:50:13 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/18 16:15:53 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/18 16:20:38 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	count;
+	int	i;
+	int	signed_n;
 
-	count = 0;
-	while (str[count] != '\0')
-		count++;
-	return (count);
+	signed_n = (int)n;
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < signed_n)
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (0);
 }

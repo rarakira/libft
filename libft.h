@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/16 13:37:06 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/16 14:29:38 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/18 12:24:40 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/18 16:50:03 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 # include <unistd.h>
 
-int		ft_strlen(char *str);
-
+int	ft_strlen(char *str);
+int	ft_isalpha(int c);
 
 #endif
