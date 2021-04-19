@@ -6,13 +6,13 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/18 17:07:16 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/19 13:05:19 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CFILES =	ft_strlen.c	ft_isalpha.c
+CFILES =	ft_strlen.c		ft_isalpha.c	ft_bzero.c		ft_memset.c
 
 CFILES_B =
 
@@ -35,7 +35,7 @@ $(NAME) : $(OBJS)
 bonus :
 	make OBJS="$(OBJS_B)" all
 
-test : $(NAME)
+test : $(NAME) main.c
 	$(CC) $(FLAGS) main.c -L. -lft -o test
 
 clean :
