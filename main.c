@@ -7,6 +7,7 @@ int	main(void)
 	size_t n = 20;
 	char *ptr = malloc(n);
 	char *ptr_memset;
+	char *ptr_memcpy;
 
 	/* ft_memset */
 
@@ -37,6 +38,15 @@ int	main(void)
 			break ;
 		}
 	}
+	printf("Success\n");
+
+	/* ft_memcpy */
+
+	char *hello = "Hello world!";
+
+	printf("\nft_memcpy:\n");
+	ptr_memcpy = ft_memcpy(ptr, hello, 5);
+	printf("%s\n", ptr_memcpy);
 	printf("Success\n");
 	free(ptr);
 
