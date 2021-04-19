@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 12:04:07 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/19 13:27:59 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/19 14:26:35 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
-
-	str = (unsigned char *)s;
 	while (n > 0)
-		str[--n] = '\0';
+		((unsigned char *)s)[--n] = '\0';
 	return ;
 }
