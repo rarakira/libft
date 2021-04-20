@@ -3,6 +3,40 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* ft_strncmp */
+void	test_strncmp()
+{
+	const char	src_1[] = "Hello World!";
+	const char	src_2[] = "Hello Patrick!";
+	int n = 5;
+
+	printf("\nstrncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, strncmp(src_1, src_2, n));
+
+	printf("\nft_strncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, ft_strncmp(src_1, src_2, n));
+
+	n = 15;
+
+	printf("\nstrncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, strncmp(src_1, src_2, n));
+
+	printf("\nft_strncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, ft_strncmp(src_1, src_2, n));
+
+	printf("\nstrncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_2, src_1, strncmp(src_2, src_1, n));
+
+	printf("\nft_strncmp:\n");
+	printf("First %d letters in %s & %s are %d\n", n, src_2, src_1, ft_strncmp(src_2, src_1, n));
+
+	printf("\nstrncmp:\n");
+	printf("First %d letters in \"aaa\" & %s are %d\n", n, src_1, strncmp("aaa", src_1, n));
+
+	printf("\nft_strncmp:\n");
+	printf("First %d letters in \"aaa\" & %s are %d\n", n, src_1, ft_strncmp("aaa", src_1, n));
+}
+
 /* ft_strjoin */
 void	test_strjoin()
 {
@@ -196,7 +230,7 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_strjoin();
+	test_strncmp();
 	/* MAIN */
 
 	/*
@@ -208,6 +242,7 @@ int	main(void)
 	test_isalpha();
 
 	test_substr();
+	test_strjoin();
 	*/
 
 	return (0);

@@ -6,18 +6,18 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 16:15:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/18 16:20:38 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/20 13:54:00 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2, unsigned int n)
-{
-	int	i;
-	int	signed_n;
+#include <stddef.h>
 
-	signed_n = (int)n;
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
+{
+	unsigned int	i;
+
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < signed_n)
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
 		if (s1[i] == s2[i])
 			i++;

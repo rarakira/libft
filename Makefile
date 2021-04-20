@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/20 12:52:19 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/20 13:54:33 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 
 CFILES =	ft_strlen.c		ft_isalpha.c	ft_bzero.c		ft_memset.c		ft_memcpy.c\
 			ft_memccpy.c	ft_memmove.c\
+			ft_strncmp.c	\
 			ft_substr.c		ft_strjoin.c
 
 CFILES_B =
