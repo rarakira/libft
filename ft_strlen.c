@@ -6,11 +6,13 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/16 14:30:00 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/18 16:50:13 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/20 11:39:59 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stddef.h>
+
+size_t	ft_strlen(const char *str)
 {
 	int	count;
 

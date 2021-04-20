@@ -3,6 +3,36 @@
 #include <stdlib.h>
 #include <string.h>
 
+
+/* ft_substr */
+void	test_substr()
+{
+	char		*new_str;
+	const char	src[] = "Hello Brave New World.";
+	const char	src_num[] = "1234567890";
+
+	printf("\nft_substr:\n");
+	new_str = ft_substr(src, 6, 5);
+	printf("Old: %s\nNew: %s\n\n", src, new_str);
+	free(new_str);
+
+	new_str = ft_substr(src, 6, 50);
+	printf("Old: %s\nNew: %s\n\n", src, new_str);
+	free(new_str);
+
+	new_str = ft_substr(src, 50, 5);
+	printf("Old: %s\nNew: %s\n\n", src, new_str);
+	free(new_str);
+
+	new_str = ft_substr(src_num, 5, 5);
+	printf("Old: %s\nNew: %s\n\n", src_num, new_str);
+	free(new_str);
+
+	new_str = ft_substr(src_num, 1, 40);
+	printf("Old: %s\nNew: %s\n\n", src_num, new_str);
+	free(new_str);
+}
+
 /* ft_memmove */
 
 void	test_memmove()
@@ -143,7 +173,7 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_memmove();
+	test_substr();
 	/* MAIN */
 
 	/*
@@ -151,6 +181,7 @@ int	main(void)
 	test_memcpy();
 	test_memccpy();
 	test_bzero();
+	test_memmove();
 	test_isalpha();
 	*/
 
