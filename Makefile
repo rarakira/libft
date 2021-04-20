@@ -6,14 +6,14 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/20 14:21:39 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/20 15:45:21 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 CFILES =	ft_strlen.c		ft_isalpha.c	ft_bzero.c		ft_memset.c		ft_memcpy.c\
-			ft_memccpy.c	ft_memmove.c	ft_memchr.c\
+			ft_memccpy.c	ft_memmove.c	ft_memchr.c		ft_memcmp.c\
 			ft_strncmp.c	\
 			ft_substr.c		ft_strjoin.c
 
