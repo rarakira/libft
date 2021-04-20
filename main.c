@@ -3,6 +3,29 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* ft_strjoin */
+void	test_strjoin()
+{
+	char		*new_str;
+	const char	src_1[] = "Hello ";
+	const char	src_2[] = "World!";
+
+	printf("\nft_strjoin:\n");
+	new_str = ft_strjoin(src_1, src_2);
+	printf("Old: %s & %s\nNew: %s\n\n", src_1, src_2, new_str);
+	free(new_str);
+
+	const char	src_3[] = "12345";
+	const char	src_4[] = "6789 10";
+
+	new_str = ft_strjoin(src_3, src_4);
+	printf("Old: %s & %s\nNew: %s\n\n", src_3, src_4, new_str);
+	free(new_str);
+
+	new_str = ft_strjoin(src_4, src_3);
+	printf("Old: %s & %s\nNew: %s\n\n", src_4, src_3, new_str);
+	free(new_str);
+}
 
 /* ft_substr */
 void	test_substr()
@@ -173,7 +196,7 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_substr();
+	test_strjoin();
 	/* MAIN */
 
 	/*
@@ -183,6 +206,8 @@ int	main(void)
 	test_bzero();
 	test_memmove();
 	test_isalpha();
+
+	test_substr();
 	*/
 
 	return (0);
