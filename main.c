@@ -3,6 +3,26 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* ft_memchr */
+void	test_memchr()
+{
+	const char	src_1[] = "Hello World";
+	const char	src_2[] = "No search symbol";
+	char	letter = 'W';
+
+	printf("\nft_memchr:\n");
+	printf("String: %s\n%c found: %s\n\n", src_1, letter, (char *)ft_memchr(src_1, letter, 10));
+
+	printf("\nmemchr:\n");
+	printf("String: %s\n%c found: %s\n\n", src_1, letter, (char *)memchr(src_1, letter, 10));
+
+	printf("\nft_memchr:\n");
+	printf("String: %s\n%c not found: %s\n\n", src_2, letter, (char *)ft_memchr(src_2, letter, 10));
+
+	printf("\nmemchr:\n");
+	printf("String: %s\n%c not found: %s\n\n", src_2, letter, (char *)memchr(src_2, letter, 10));
+}
+
 /* ft_strncmp */
 void	test_strncmp()
 {
@@ -230,7 +250,7 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_strncmp();
+	test_memchr();
 	/* MAIN */
 
 	/*
@@ -240,6 +260,7 @@ int	main(void)
 	test_bzero();
 	test_memmove();
 	test_isalpha();
+	test_strncmp();
 
 	test_substr();
 	test_strjoin();

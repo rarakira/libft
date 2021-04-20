@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/18 16:15:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/20 15:03:23 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/20 14:11:37 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/20 15:32:47 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-/* Function to compare n el-ts in two strings */
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	unsigned char	ch;
 	unsigned int	i;
 
+	ch = (unsigned char)c;
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	while (i <= n)
 	{
-		if (s1[i] == s2[i])
-			i++;
-		else
-			return (s1[i] - s2[i]);
+		if (((const char *)s)[i] == ch)
+			return ((void *)(s + i));
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
