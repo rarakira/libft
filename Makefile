@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/21 10:34:09 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/21 13:24:31 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,9 +37,6 @@ $(NAME) : $(OBJS)
 
 bonus :
 	make OBJS="$(OBJS_B)" all
-
-test : $(NAME) main.c
-	$(CC) $(FLAGS) main.c -L. -lft -o test
 
 clean :
 	rm -f $(OBJS) $(OBJS_B)
