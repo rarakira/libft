@@ -12,7 +12,7 @@ void	test_memcpy(void);
 void	test_memccpy(void);
 void	test_memmove(void);
 void	test_memchr(void);
-void	test_memcpm(void);
+void	test_memcmp(void);
 void	test_strlen(void);
 void	test_strlcpy(void);
 void	test_strlcat(void);

@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_isalpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/21 22:53:11 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 22:54:09 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/21 22:38:59 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/21 22:39:27 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-int	main(void)
+void	test_isalpha()
 {
-	/* MAIN */
-
-	//test_memset();
-	//test_memcpy();
-	//test_memccpy();
-	//test_bzero();
-	//test_memmove();
-	//test_memchr();
-	test_memcmp();
-	//test_strlcpy();
-	//test_strlcat();
-	//test_strchr();
-	//test_strrchr();
-
-	//test_isalpha();
-	//test_strncmp();
-
-	//test_substr();
-	//test_strjoin();
-
-
-	return (0);
+	printf("\nft_isalpha:\n");
+	printf("Nope: %d, Yep: %d\n", ft_isalpha(5), ft_isalpha(103));
 }

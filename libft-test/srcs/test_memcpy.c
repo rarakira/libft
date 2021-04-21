@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_memcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/21 22:53:11 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 22:54:09 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/21 22:44:25 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/21 22:44:37 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-int	main(void)
+void	test_memcpy()
 {
-	/* MAIN */
+	char *hello = "Hello world!";
+	size_t n = 20;
+	char *ptr = malloc(n);
+	char *ptr_memcpy;
 
-	//test_memset();
-	//test_memcpy();
-	//test_memccpy();
-	//test_bzero();
-	//test_memmove();
-	//test_memchr();
-	test_memcmp();
-	//test_strlcpy();
-	//test_strlcat();
-	//test_strchr();
-	//test_strrchr();
+	printf("\nft_memcpy:\n");
+	ptr_memcpy = ft_memcpy(ptr, hello, 5);
+	printf("%s\n", ptr_memcpy);
+	printf("Success\n");
+	free(ptr);
 
-	//test_isalpha();
-	//test_strncmp();
-
-	//test_substr();
-	//test_strjoin();
-
-
-	return (0);
+	char a[] = "Firststring";
+	const char b[] = "Secondstring";
+	memcpy(a, b, 5);
+	printf("New arrays : %s\t%s\n", a, b);
 }
