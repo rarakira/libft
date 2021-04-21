@@ -11,8 +11,6 @@ CC			= cc
 
 CFLAGS		= -Wall -Wextra -Werror -Iincludes
 
-OPTFLAGS	= -O2
-
 RM			= rm -f
 
 all:	libft ${NAME}
@@ -32,7 +30,6 @@ clean:
 
 fclean:	clean
 		${RM} ${NAME}
-		cd ../libft && make fclean
 
 libft_re:
 		cd ../libft && make re
