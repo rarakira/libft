@@ -28,13 +28,15 @@ ${NAME}:${OBJS}
 
 clean:
 		${RM} ${OBJS}
+		cd ../libft && make clean
 
 fclean:	clean
 		${RM} ${NAME}
+		cd ../libft && make fclean
 
 libft_re:
-		cd ../../libft && make fclean
+		cd ../libft && make re
 
-re:		libft_re fclean all
+re:		fclean all
 
 .PHONY: all clean fclean re

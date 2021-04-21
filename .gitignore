@@ -1,0 +1,10 @@
+*.o
+*.d
+*.a
+test*
+a.out
+.vscode/
+old-*.c
+draft-*.c
+nope-*.c
+.DS_Store

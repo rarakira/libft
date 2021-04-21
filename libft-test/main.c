@@ -283,7 +283,7 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_strlcpy();
+	test_strlcat();
 	/* MAIN */
 
 	/*
@@ -294,6 +294,8 @@ int	main(void)
 	test_memmove();
 	test_memchr();
 	test_memcmp();
+	test_strlcpy();
+
 	test_isalpha();
 	test_strncmp();
 

@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/21 13:24:31 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/21 16:12:52 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 CFILES =	ft_isalpha.c	ft_bzero.c		ft_memset.c		ft_memcpy.c\
 			ft_memccpy.c	ft_memmove.c	ft_memchr.c		ft_memcmp.c\
-			ft_strncmp.c	ft_strlen.c		ft_strlcpy.c\
+			ft_strncmp.c	ft_strlen.c		ft_strlcpy.c	ft_strlcat.c\
 			ft_substr.c		ft_strjoin.c
 
 CFILES_B =
@@ -42,7 +42,7 @@ clean :
 	rm -f $(OBJS) $(OBJS_B)
 
 fclean : clean
-	rm -f $(NAME) test
+	rm -f $(NAME)
 
 re : fclean all
 
