@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 19:15:19 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 19:30:57 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/21 21:50:42 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,11 @@ void	test1_strchr()
     printf("\n*strchr*\n");
 	printf("String: %s\nFind: %c\n", str, (char)f);
     ptr = strchr(str, f);
-    printf("Letter found: %c\nAt %p\n\n", *ptr, ptr);
+    printf("Letter not found: %p\n\n", ptr);
 	printf("\n*ft_strchr*\n");
 	printf("String: %s\nFind: %c\n", str, (char)f);
     ptr = ft_strchr(str, f);
-    printf("Letter found: %c\nAt %p\n\n", *ptr, ptr);
+    printf("Letter not found: %p\n\n", ptr);
 }
 
 void	test_strchr()
