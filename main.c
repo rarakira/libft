@@ -3,6 +3,67 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* ft_strlcpy */
+void	test_strlcpy()
+{
+	char	dest_1[] = "Hello World!";
+	char	dest_2[] = "Hello World!";
+	char	src_2[] = "0123456";
+	size_t n_1 = 12;
+
+	printf("\n*strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_1, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_1), dest_1);
+	printf("\n*ft_strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_2, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", ft_strlcpy(dest_2, src_2, n_1), dest_2);
+}
+
+void	test2_strlcpy()
+{
+	char	dest_1[] = "0123456";
+	char	dest_2[] = "0123456";
+	char	src_2[] = "987654321000";
+	size_t n_1 = 7;
+
+	printf("\n*strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_1, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_1), dest_1);
+	printf("\n*ft_strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_2, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", ft_strlcpy(dest_2, src_2, n_1), dest_2);
+}
+
+void	test3_strlcpy()
+{
+	char	dest_1[] = "0123456";
+	char	dest_2[] = "0123456";
+	char	src_2[] = "9876543";
+	size_t n_1 = 0;
+	size_t n_2 = 1;
+	size_t n_3 = 7;
+
+	printf("\n*strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_1, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_1), dest_1);
+	printf("\n*ft_strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_2, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", ft_strlcpy(dest_2, src_2, n_1), dest_2);
+
+	printf("\n*strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_2, dest_1, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_2), dest_1);
+	printf("\n*ft_strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_2, dest_2, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", ft_strlcpy(dest_2, src_2, n_2), dest_2);
+
+	printf("\n*strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_3, dest_1, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_3), dest_1);
+	printf("\n*ft_strlcpy*\n");
+	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_3, dest_2, src_2);
+	printf("Src_size is %zu\nResult string: %s\n\n", ft_strlcpy(dest_2, src_2, n_3), dest_2);
+}
 
 /* ft_memcmp */
 void	test_memcmp()
@@ -78,7 +139,8 @@ void	test_strncmp()
 	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, strncmp(src_1, src_2, n));
 
 	printf("\nft_strncmp:\n");
-	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2, ft_strncmp(src_1, src_2, n));
+	printf("First %d letters in %s & %s are %d\n", n, src_1, src_2,
+	ft_strncmp(src_1, src_2, n));
 
 	printf("\nstrncmp:\n");
 	printf("First %d letters in %s & %s are %d\n", n, src_2, src_1, strncmp(src_2, src_1, n));
@@ -286,7 +348,9 @@ void	test_isalpha()
 
 int	main(void)
 {
-	test_memcmp();
+	test_strlcpy();
+	test2_strlcpy();
+	test3_strlcpy();
 	/* MAIN */
 
 	/*
@@ -296,6 +360,7 @@ int	main(void)
 	test_bzero();
 	test_memmove();
 	test_memchr();
+	test_memcmp();
 	test_isalpha();
 	test_strncmp();
 

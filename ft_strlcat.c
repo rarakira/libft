@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/19 12:04:07 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 10:14:51 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/20 17:43:01 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/21 09:32:36 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Function to fill memory space with '0's. */
-void	ft_bzero(void *s, size_t n)
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	while (n > 0)
-		((unsigned char *)s)[--n] = '\0';
-	return ;
+    return (0);
 }

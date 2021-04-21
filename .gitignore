@@ -6,3 +6,4 @@ test
 old-*.c
 draft-*.c
 nope-*.c
+.DS_Store
