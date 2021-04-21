@@ -6,11 +6,11 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 14:06:54 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/19 15:59:57 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/21 09:33:06 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {

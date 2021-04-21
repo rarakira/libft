@@ -5,3 +5,4 @@ test
 .vscode/
 old-*.c
 draft-*.c
+nope-*.c

@@ -6,11 +6,11 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 16:15:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/20 15:03:23 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/21 09:33:57 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /* Function to compare n el-ts in two strings */
 
