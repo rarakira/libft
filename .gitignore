@@ -1,7 +1,8 @@
 *.o
 *.d
 *.a
-test*
+test
+test.c
 a.out
 .vscode/
 old-*.c
