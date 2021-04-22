@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/22 10:44:14 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/22 11:37:17 by lbaela           ###   ########.fr       */
+/*   Created: 2021/04/22 13:14:37 by lbaela            #+#    #+#             */
+/*   Updated: 2021/04/22 13:15:50 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Function locates the first occurrence of 'needle' string in the
-'haystack' string in the 'len' characters. */
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+int	ft_isalnum(int c)
 {
-	size_t	n_len;
-	size_t	i;
-	char	*ptr;
-
-	n_len = ft_strlen(needle);
-	i = 0;
-	ptr = NULL;
-	while ((len - i) >= n_len && !ptr)
-	{
-		if (!ft_strncmp(haystack + i, needle, n_len))
-			ptr = (char *)(haystack + i);
-		i++;
-	}
-	return (ptr);
+	return (ft_isdigit(c) || ft_isalpha(c));
 }
