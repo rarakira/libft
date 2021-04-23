@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 17:39:57 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 20:50:35 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/23 09:49:33 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	else
 	{
-		ft_memcpy(dst, src, srclen - 1); //should check
-		dst[srclen - 1] = '\0';
+		ft_memcpy(dst, src, srclen); //should check
+		dst[srclen] = '\0';
 	}
 	return (srclen);
 }
