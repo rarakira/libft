@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 22:53:11 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/23 10:36:11 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/23 12:10:40 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,12 @@ int	main(void)
 	//test_isprint();
 	//test_toupper();
 	//test_tolower();
-	test_calloc();
-	test_strdup();
+	//test_calloc();
+	//test_strdup();
 
 	//test_substr();
 	//test_strjoin();
+	test_strtrim();
 	//sleep(10000);
 
 

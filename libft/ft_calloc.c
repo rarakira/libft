@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:42:40 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/22 19:15:06 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/23 13:04:45 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	*ft_calloc(size_t count, size_t size)
 	{
 		ft_bzero(ptr, count * size);
 	}
-	return(ptr);
+	return (ptr);
 }
