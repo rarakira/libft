@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:09:06 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 14:34:48 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/25 14:47:26 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,15 +74,20 @@ static char	*create_str(char **str, char c)
 	return (ptr);
 }
 
-static void	free_all(char **ptr, unsigned int i, unsigned int n_str)
+static void	free_all(char **ptr)
 {
-	(void) ptr;
-	(void) i;
-	(void) n_str;
+	unsigned int	i;
+
+	i = 0;
+	while (ptr[i])
+	{
+		free(ptr[i++]);
+	}
+	free(ptr);
 }
 
 /* Allocates (with malloc) and returns an array of strings obtained by
-splitting ’s’ using the character ’c’ as a delimiter. The array must be ended
+splitting ’s’ using the character ’c’ as a delimiter. The array is ended
 by a NULL pointer. */
 char	**ft_split(char const *s, char c)
 {
@@ -103,7 +108,7 @@ char	**ft_split(char const *s, char c)
 		ptr[i] = create_str(&str, c);
 		if (!ptr[i])
 		{
-			free_all(ptr, i, n_str);
+			free_all(ptr);
 			return (NULL);
 		}
 		i++;
