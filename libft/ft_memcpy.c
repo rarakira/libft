@@ -6,15 +6,16 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 13:33:34 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 09:33:23 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/23 19:51:31 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* The function copies 'n' bytes from memory area 'src' to memory area 'dst'. */
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < n)

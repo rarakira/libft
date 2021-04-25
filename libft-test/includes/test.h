@@ -33,5 +33,6 @@ void	test_strdup(void);
 void	test_substr(void);
 void	test_strjoin(void);
 void	test_strtrim(void);
+void	test_split(void);
 
 #endif

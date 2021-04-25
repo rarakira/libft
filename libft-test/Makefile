@@ -30,6 +30,7 @@ clean:
 
 fclean:	clean
 		${RM} ${NAME}
+		cd ../libft && make fclean
 
 libft_re:
 		cd ../libft && make re
