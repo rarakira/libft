@@ -35,5 +35,6 @@ void	test_strjoin(void);
 void	test_strtrim(void);
 void	test_split(void);
 void	test_itoa(void);
+void	test_strmapi(void);
 
 #endif

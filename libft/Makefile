@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/25 15:17:06 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/25 16:47:00 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFILES =	ft_memcpy.c		ft_bzero.c		ft_memset.c		\
 			ft_isascii.c	ft_isprint.c	ft_toupper.c	ft_tolower.c\
 			ft_calloc.c		ft_strdup.c\
 			ft_substr.c		ft_strjoin.c	ft_strtrim.c	ft_split.c\
-			ft_itoa.c
+			ft_itoa.c		ft_strmapi.c
 
 CFILES_B =
 

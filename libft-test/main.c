@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 22:53:11 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 15:17:10 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/25 16:50:53 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,8 @@ int	main(void)
 	//test_strjoin();
 	//test_strtrim();
 	//test_split();
-	test_itoa();
+	//test_itoa();
+	test_strmapi();
 	//sleep(10000);
 
 
