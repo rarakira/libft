@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:09:06 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 14:47:26 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/26 14:44:15 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ static char	*create_str(char **str, char c)
 		*str = (*str + 1);
 	while (((*str)[count] != c) && ((*str)[count] != '\0'))
 		count++;
-	printf("String: %s, length: %zu\n", *str, count);
 	ptr = (char *)malloc(sizeof(char) * (count + 1));
 	if (ptr)
 	{
