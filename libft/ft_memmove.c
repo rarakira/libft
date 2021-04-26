@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 16:04:46 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 09:33:28 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/26 10:58:46 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned int	i;
 
 	i = 0;
+	if (!dst && !src)
+		return(NULL);
 	while (i < len)
 	{
 		if (((unsigned char *)src + i) == ((unsigned char *)dst))

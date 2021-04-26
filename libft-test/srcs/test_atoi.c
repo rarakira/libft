@@ -6,13 +6,13 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 14:07:31 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/22 14:23:38 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/26 12:43:16 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "test.h"
 
-void	test_atoi()
+void	test1_atoi()
 {
 	const char str1[] = "     ---123gfhdk";
 	const char str2[] = "    +123   5";
@@ -30,4 +30,45 @@ void	test_atoi()
 	printf("%s\t\t= %d\n", str2, atoi(str2));
 	printf("%s\t\t= %d\n", str3, atoi(str3));
 	printf("%s\t\t\t= %d\n", str4, atoi(str4));
+}
+
+void	test2_atoi()
+{
+	char *n = "945";
+
+	printf("\n\n* ft_atoi *\n");
+	printf("%s\t= %d\n", n, ft_atoi(n));
+
+	printf("\n\n* atoi *\n");
+	printf("%s\t= %d\n", n, atoi(n));
+}
+
+void	test3_atoi()
+{
+	char *n = "99999999999999999999999999";
+
+	printf("\n\n* ft_atoi *\n");
+	printf("%s\t= %d\n", n, ft_atoi(n));
+
+	printf("\n\n* atoi *\n");
+	printf("%s\t= %d\n", n, atoi(n));
+}
+
+void	test4_atoi()
+{
+	char *n = "-99999999999999999999999999";
+
+	printf("\n\n* ft_atoi *\n");
+	printf("%s\t= %d\n", n, ft_atoi(n));
+
+	printf("\n\n* atoi *\n");
+	printf("%s\t= %d\n", n, atoi(n));
+}
+
+void	test_atoi()
+{
+	test1_atoi();
+	test2_atoi();
+	test3_atoi();
+	test4_atoi();
 }

@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 22:47:51 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 22:48:00 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/26 11:01:41 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ void	test_memmove()
 	printf("\n* ft_memmove *\nOld: %s\n", ft_s);
 	ft_memmove((ft_s + 3), ft_s, 5);
 	printf("New: %s\n", ft_s);
+
 }

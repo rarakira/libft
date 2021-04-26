@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/25 21:13:56 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/26 11:57:30 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,10 +42,10 @@ $(NAME) : $(OBJS)
 	ar rcs $(NAME) $?
 
 %.o : %.c
-	$(CC) -c $(FLAGS) $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 bonus :
-	make OBJS="$(OBJS_B)" all
+#	make OBJS="$(OBJS_B)" all
 
 clean :
 	rm -f $(OBJS) $(OBJS_B)

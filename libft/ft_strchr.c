@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 19:06:04 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 22:14:57 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/26 11:26:42 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ char	*ft_strchr(const char *s, int c)
 	size_t	srcsize;
 
 	srcsize = ft_strlen(s);
-	return ((char *)ft_memchr(s, c, srcsize));
+	return ((char *)ft_memchr(s, c, srcsize + 1));
 }
