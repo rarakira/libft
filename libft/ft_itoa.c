@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 15:04:26 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 14:13:33 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 16:20:00 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	translate_nums(char *num, long int n, int sign, unsigned int len)
 	}
 }
 
-/* Function converts integers to strings (memory allocated) */
+/* Function converts integers to strings (memory allocated). */
 char	*ft_itoa(int n)
 {
 	char			*num;
