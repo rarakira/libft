@@ -6,13 +6,13 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/18 16:15:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/26 11:34:23 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 16:13:03 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/* Function to compare n el-ts in two strings */
+/* Function to compare 'n' el-ts in two strings */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;

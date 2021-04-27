@@ -6,12 +6,16 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 14:11:37 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 11:59:10 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 15:49:40 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Function locates the first occurrence of 'c' in string 's'.
+
+It returns a pointer to the byte located, or NULL if 'c' does not exist within
+'n' bytes. */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	ch;

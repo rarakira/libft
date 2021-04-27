@@ -6,12 +6,16 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/19 16:04:46 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 11:59:31 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 15:41:12 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/* Function copies 'len' bytes from 'src' to 'dst'.
+The two strings may overlap.
+
+The function returns the original value of 'dst'. */
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned int	i;
