@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 21:08:37 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 21:48:06 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:07:22 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,17 @@ void	ft_putnbr_fd(int n, int fd)
 	unsigned int	len;
 	long int		mod;
 	char			ch;
+	long int		nn;
 
 	mod = 10;
 	len = 1;
-	if (n < 0)
+	nn = (long int)n;
+	if (nn < 0)
 	{
 		write(fd, "-", 1);
-		n *= -1;
+		nn *= -1;
 	}
-	while (n % mod != n)
+	while (nn % mod != nn)
 	{
 		mod *= 10;
 		len++;
@@ -34,8 +36,8 @@ void	ft_putnbr_fd(int n, int fd)
 	while (mod >= 10)
 	{
 		mod /= 10;
-		ch = (n / mod) + '0';
-		n = n % mod;
+		ch = (nn / mod) + '0';
+		nn = nn % mod;
 		write(fd, &ch, 1);
 	}
 }

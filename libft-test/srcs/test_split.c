@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:34:30 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 14:31:10 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:45:30 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,21 @@ void	test6_split()
 	char sep = 'c';
 	char	**ptr;
 
-	printf("\n\n* ft_split: test 5 *\n");
+	printf("\n\n* ft_split: test 6 *\n");
+	printf("Original string: %s\tset: %c\n", str4, sep);
+	ptr = ft_split(str4, sep);
+	printf("\n");
+
+	print_and_free(ptr);
+}
+
+void	test7_split()
+{
+	const char str4[] = "";
+	char sep = 'z';
+	char	**ptr;
+
+	printf("\n\n* ft_split: test 7 *\n");
 	printf("Original string: %s\tset: %c\n", str4, sep);
 	ptr = ft_split(str4, sep);
 	printf("\n");
@@ -122,4 +136,5 @@ void	test_split()
 	test4_split();
 	test5_split();
 	test6_split();
+	test7_split();
 }

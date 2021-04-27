@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 14:50:16 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 16:03:57 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:09:33 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@ void	test_itoa()
 	int n2 = 18765437;
 	int n3 = -18765437;
 	int n4 = 2147483647;
-	int n5 = 0;
+	int n5 = -2147483648;
+	int n6 = 0;
 
 	printf("\n\n* ft_itoa *\n");
 	printf("%d\t\t= %s\n", n1, ft_itoa(n1));
 	printf("%d\t= %s\n", n2, ft_itoa(n2));
 	printf("%d\t= %s\n", n3, ft_itoa(n3));
 	printf("%d\t= %s\n", n4, ft_itoa(n4));
-	printf("%d\t\t= %s\n", n5, ft_itoa(n5));
+	printf("%d\t= %s\n", n5, ft_itoa(n5));
+	printf("%d\t\t= %s\n", n6, ft_itoa(n6));
 }

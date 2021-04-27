@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 12:08:12 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 12:00:06 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:39:09 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		return (ft_substr(s1, start, end - start + 1));
 	}
-	return (ft_substr(s1, start, 1));
+	return (ft_substr(s1, start, 0));
 }

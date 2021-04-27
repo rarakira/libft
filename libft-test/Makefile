@@ -18,7 +18,7 @@ all:	libft ${NAME}
 libft:
 		cd ../libft && make
 
-${NAME}:${OBJS}
+${NAME}:${OBJS} ${LIBDIR}/libft.a
 		${CC} ${CFLAGS} ${OBJS} -L${LIBDIR} -l${LIB} -o ${NAME}
 
 %.o:	%.c

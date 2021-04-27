@@ -6,13 +6,13 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/25 15:04:26 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/25 16:03:17 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:13:33 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	translate_nums(char *num, int n, int sign, unsigned int len)
+static void	translate_nums(char *num, long int n, int sign, unsigned int len)
 {
 	if (sign)
 		num[0] = '-';
@@ -32,25 +32,25 @@ char	*ft_itoa(int n)
 	unsigned int	len;
 	long int		mod;
 	int				sign;
+	long int		nn;
 
 	mod = 10;
 	sign = 0;
 	len = 1;
-	if (n < 0)
+	nn = n;
+	if (nn < 0)
 	{
 		sign = 1;
-		n *= -1;
+		nn *= -1;
 		len++;
 	}
-	while (n % mod != n)
+	while (nn % mod != nn)
 	{
 		mod *= 10;
 		len++;
 	}
 	num = ft_calloc(len + 1, sizeof(char));
 	if (num)
-	{
-		translate_nums(num, n, sign, len);
-	}
+		translate_nums(num, nn, sign, len);
 	return (num);
 }
