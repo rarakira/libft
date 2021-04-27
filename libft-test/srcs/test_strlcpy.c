@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 13:17:24 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/21 22:12:31 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 12:02:27 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	test1_strlcpy()
 	char	src_2[] = "0123456";
 	size_t n_1 = 12;
 
+	printf("\n**** Test 1 ****\n");
 	printf("\n*strlcpy*\n");
 	printf("Dst_size is %zu\nDst: %s\nSrs: %s\n", n_1, dest_1, src_2);
 	printf("Src_size is %zu\nResult string: %s\n\n", strlcpy(dest_1, src_2, n_1), dest_1);

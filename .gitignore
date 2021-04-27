@@ -10,3 +10,4 @@ draft-*.c
 nope-*.c
 .DS_Store
 /libft-unit-tests
+/libft-war-machine

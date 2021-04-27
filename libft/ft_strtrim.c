@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 12:08:12 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/26 14:45:16 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 12:00:06 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	//printf("len = %zu\n", end);
 	while (start < end && inset(s1[start], set))
 		start++;
 	while (end > start && inset(s1[end], set))
