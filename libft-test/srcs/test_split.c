@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:34:30 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 14:45:30 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 15:00:31 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,35 @@ void	test7_split()
 	print_and_free(ptr);
 }
 
+void	test8_split()
+{
+	const char str4[] = "Hello";
+	char sep = '1';
+	char	**ptr;
+
+	printf("\n\n* ft_split: test 8 *\n");
+	printf("Original string: %s\tset: %c\n", str4, sep);
+	ptr = ft_split(str4, sep);
+	printf("\n");
+
+	print_and_free(ptr);
+}
+
+
+void	test9_split()
+{
+	const char str4[] = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultricies diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.";
+	char sep = 'i';
+	char	**ptr;
+
+	printf("\n\n* ft_split: test 9 *\n");
+	printf("Original string: %s\tset: %c\n", str4, sep);
+	ptr = ft_split(str4, sep);
+	printf("\n");
+
+	print_and_free(ptr);
+}
+
 void	test_split()
 {
 	test1_split();
@@ -136,5 +165,7 @@ void	test_split()
 	test4_split();
 	test5_split();
 	test6_split();
+	test8_split();
+	test9_split();
 	test7_split();
 }

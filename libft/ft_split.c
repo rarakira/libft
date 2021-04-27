@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:09:06 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 14:50:02 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/27 14:56:02 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static unsigned int	count_strings (char const *s, char c)
 	len = ft_strlen(s);
 	if (s[0] == c)
 		count--;
-	if (s[len - 1] == c && count > 1)
+	if (s[len - 1] == c && count > 0)
 		count--;
 	return (count);
 }
