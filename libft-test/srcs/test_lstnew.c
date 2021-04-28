@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/28 11:14:10 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/28 14:34:52 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 18:09:17 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,14 @@ void	test1_lstnew()
 	printf("\n\t***** Test 1: Lstnew *****\n\n");
 	
 	ptr = ft_lstnew("Hello World!");
+	if (ptr)
+		printf("New list created:\nContent: %s\n", ptr->content);
+	else
+	{
+		printf("New list was not created");
+	}
+	free(ptr);
+	ptr = ft_lstnew(NULL);
 	if (ptr)
 		printf("New list created:\nContent: %s\n", ptr->content);
 	else
@@ -172,14 +180,14 @@ void	test4_lstlast()
 	printf("\n\t***** *********** *****\n\n");
 }
 
-void	test5_lstadd_back()
+void	test5_1_lstadd_back()
 {
 	t_list	*ptr;
 	t_list	*ptr2;
 	t_list	**start = NULL;
 	t_list	*temp = NULL;
 
-	printf("\n\t***** Test 5: lstadd_back *****\n\n");
+	printf("\n\t***** Test 5.1: lstadd_back *****\n\n");
 	
 	start = (t_list **)malloc(sizeof(t_list *));
 	if (!start)
@@ -223,11 +231,37 @@ void	test5_lstadd_back()
 	printf("\n\t***** *********** *****\n\n");
 }
 
+void	test5_2_lstadd_back()
+{
+	t_list	**start = NULL;
+	t_list	*temp = NULL;
+	t_list *l = ((void *)0);
+	t_list *n = ft_lstnew(strdup("OK"));
+
+	printf("\n\t***** Test 5.2: lstadd_back *****\n\n");
+
+	*start = l;
+	printf("The item's content is %s\n", (ft_lstlast(*start))->content);
+	ft_lstadd_back(start, n);
+	printf("The last item's content is %s\n", (ft_lstlast(*start))->content);
+
+	while (*start)
+	{
+		temp = *start;
+		*start = (*start)->next;
+		free(temp);
+		printf("freed ptr\n");
+	}
+	free(start);
+	printf("\n\t***** *********** *****\n\n");
+}
+
 void	test_lstnew()
 {
-	//test1_lstnew();
+	test1_lstnew();
     //test2_lstadd_front();
 	//test3_lstsize();
 	//test4_lstlast();
-	test5_lstadd_back();
+	//test5_1_lstadd_back();
+	//test5_2_lstadd_back();
 }
