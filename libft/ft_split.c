@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:09:06 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 15:14:28 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 22:42:59 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ char	**ft_split(char const *s, char c)
 	char			*str;
 	char			**ptr;
 
+	if (!s)
+		return (NULL);
 	n_str = count_strings(s, c);
 	ptr = (char **)malloc(sizeof(char *) * (n_str + 1));
 	if (!ptr)

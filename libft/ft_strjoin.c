@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 12:02:19 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 16:11:21 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 22:39:58 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	unsigned int	s1_len;
 	unsigned int	s2_len;
 
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (ft_strdup(s1));
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	new_str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));

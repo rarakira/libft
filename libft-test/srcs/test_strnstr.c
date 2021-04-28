@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 08:51:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/28 09:21:56 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 22:08:15 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,16 @@ void	test4_1_strnstr()
     char    *ptr = NULL;
 
     printf("\n**** Test 4 - 1 ****\n");
+
+    ptr = strnstr(str2, str1, len);
+    if (ptr)
+    {
+        printf("String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("String not found: %p\n\n", ptr);
+    }
     
     ptr = ft_strnstr(str2, str1, len);
     if (ptr)
@@ -132,15 +142,7 @@ void	test4_1_strnstr()
         printf("ft: String not found: %p\n\n", ptr);
     }
     
-    ptr = strnstr(str2, str1, len);
-    if (ptr)
-    {
-        printf("String found: %s\nAt %p\n\n", ptr, ptr);
-    }
-    else
-    {
-        printf("String not found: %p\n\n", ptr);
-    }
+    
 
 }
 
@@ -152,16 +154,7 @@ void	test4_2_strnstr()
     char    *ptr = NULL;
 
     printf("\n**** Test 4 - 2 ****\n");
-    ptr = ft_strnstr(str1, str2, len);
-    if (ptr)
-    {
-        printf("ft: String found: %s\nAt %p\n\n", ptr, ptr);
-    }
-    else
-    {
-        printf("ft: String not found: %p\n\n", ptr);
-    }
-    
+
     ptr = strnstr(str1, str2, len);
     if (ptr)
     {
@@ -171,6 +164,44 @@ void	test4_2_strnstr()
     {
         printf("String not found: %p\n\n", ptr);
     }
+
+    ptr = ft_strnstr(str1, str2, len);
+    if (ptr)
+    {
+        printf("ft: String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("ft: String not found: %p\n\n", ptr);
+    }
+}
+
+void	test4_3_strnstr()
+{
+    char    *ptr = NULL;
+
+    printf("\n**** Test 4 - 3 ****\n");
+
+    ptr = strnstr(((void *)0), "fake", 3);
+    if (ptr)
+    {
+        printf("String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("String not found: %p\n\n", ptr);
+    }
+
+    ptr = ft_strnstr(((void *)0), "fake", 3);
+    if (ptr)
+    {
+        printf("ft: String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("ft: String not found: %p\n\n", ptr);
+    }
+
 }
 
 void	test5_strnstr()
@@ -204,7 +235,9 @@ void	test6_strnstr()
     char    *empty = (char*)"";
 
     printf("\n**** Test 6 ****\n");
-    ;
+
+    printf("\n * ft_strnstr * \n\n");
+
     ptr = ft_strnstr(empty, "coucou", -1);
     if (ptr)
     {
@@ -214,6 +247,7 @@ void	test6_strnstr()
     {
         printf("String not found: %p\n\n", ptr);
     }
+    printf("\n * strnstr * \n\n");
     ptr = strnstr(empty, "coucou", -1);
     if (ptr)
     {
@@ -227,11 +261,12 @@ void	test6_strnstr()
 
 void	test_strnstr()
 {
-	test1_strnstr();
-    test2_strnstr();
-    test3_strnstr();
-    //test4_1_strnstr();
-    //test4_2_strnstr();
+	//test1_strnstr();
+    //test2_strnstr();
+    //test3_strnstr();
+    //test4_1_strnstr(); //segfault
+    //test4_2strnstr(); //segfault
+    test4_3_strnstr(); //segfault
     //test5_strnstr();
-    test6_strnstr();
+    //test6_strnstr();
 }

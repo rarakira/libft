@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 10:59:46 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 16:13:26 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 22:45:26 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	src_len;
 	char	*dest;
 
+	if (!s)
+		return (NULL);
 	src_len = ft_strlen(s);
 	if (start >= src_len + 1 || len == 0)
 		return ((char *)ft_calloc(1, sizeof(char)));
@@ -30,7 +32,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	dest = (char *)malloc(sizeof(char) * (len + 1));
 	if (dest == NULL)
 		return (dest);
-	dest = (char *)ft_memcpy(dest, (s + start), len);
-	dest[len] = '\0';
+	ft_strlcpy(dest, (s + start), len + 1);
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 13:34:30 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 15:00:31 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 21:12:22 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ static void	print_and_free(char **ptr)
 		printf("Substring[%d]: %s\n", i, ptr[i]);
 		i++;
 	}
+	printf("\nptr[%d] = %s\n\n", i, ptr[i]);
 	printf("\nEnd of strings\n\n");
 	i = 0;
 	while (ptr[i])
@@ -114,20 +115,6 @@ void	test6_split()
 	print_and_free(ptr);
 }
 
-void	test7_split()
-{
-	const char str4[] = "";
-	char sep = 'z';
-	char	**ptr;
-
-	printf("\n\n* ft_split: test 7 *\n");
-	printf("Original string: %s\tset: %c\n", str4, sep);
-	ptr = ft_split(str4, sep);
-	printf("\n");
-
-	print_and_free(ptr);
-}
-
 void	test8_split()
 {
 	const char str4[] = "Hello";
@@ -157,6 +144,53 @@ void	test9_split()
 	print_and_free(ptr);
 }
 
+
+void	test7_1_split()
+{
+	const char str4[] = "";
+	char sep = 'z';
+	char	**ptr;
+
+	printf("\n\n* ft_split: test 7.1 *\n");
+	printf("Original string: %s\tset: %c\n", str4, sep);
+	ptr = ft_split(str4, sep);
+	printf("\n");
+
+	if (ptr == NULL)
+	{
+		printf("ptr is NULL\n");
+	}
+	if (*ptr == NULL)
+	{
+		printf("*ptr is NULL\n");
+	}
+
+	print_and_free(ptr);
+}
+
+void	test7_2_split()
+{
+	const char str4[] = "";
+	char sep = ' ';
+	char	**ptr;
+
+	printf("\n\n* ft_split: test 7.2 *\n");
+	printf("Original string: %s\tset: %c\n", str4, sep);
+	ptr = ft_split(str4, sep);
+	printf("\n");
+
+	if (ptr == NULL)
+	{
+		printf("ptr is NULL\n");
+	}
+	if (*ptr == NULL)
+	{
+		printf("*ptr is NULL\n");
+	}
+
+	print_and_free(ptr);
+}
+
 void	test_split()
 {
 	test1_split();
@@ -167,5 +201,6 @@ void	test_split()
 	test6_split();
 	test8_split();
 	test9_split();
-	test7_split();
+	test7_1_split();
+	test7_2_split();
 }
