@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/21 22:53:11 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 16:21:12 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 11:59:56 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(void)
 	//test_strrchr();
 	//test_strnstr();
 	//test_strncmp();
-	test_atoi();
+	//test_atoi();
 	//test_isalpha();
 	//test_isdigit();
 	//test_isalnum();
@@ -51,6 +51,8 @@ int	main(void)
 	//test_putstr_fd();
 	//test_putendl_fd();
 	//test_putnbr_fd();
+
+	test_lstnew();
 	//sleep(10000);
 
 

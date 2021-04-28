@@ -12,3 +12,5 @@ nope-*.c
 /libft-unit-tests
 /libft-war-machine
 /Libftest
+/libftTester
+/test-libft

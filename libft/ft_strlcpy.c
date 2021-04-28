@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 17:39:57 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 11:36:12 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 14:46:03 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;
 
+	if (!src || !dst)
+		return (0);
 	srclen = ft_strlen(src);
 	if (dstsize == 0)
 		return (srclen);

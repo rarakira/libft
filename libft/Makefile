@@ -6,7 +6,7 @@
 #    By: lbaela <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/18 14:03:12 by lbaela            #+#    #+#              #
-#    Updated: 2021/04/27 13:07:55 by lbaela           ###   ########.fr        #
+#    Updated: 2021/04/28 15:29:14 by lbaela           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,13 +26,15 @@ CFILES =	ft_memcpy.c			ft_bzero.c			ft_memset.c\
 			ft_putchar_fd.c		ft_putstr_fd.c		ft_putendl_fd.c\
 			ft_putnbr_fd.c
 
-CFILES_B =
+CFILES_B =	ft_lstnew.c			ft_lstadd_front.c	ft_lstsize.c\
+			ft_lstlast.c		ft_lstadd_back.c	ft_lstdelone.c\
+			ft_lstclear.c		ft_lstiter.c		ft_lstmap.c
 
 OBJS = $(CFILES:.c=.o)
 
 OBJS_B = $(CFILES_B:.c=.o)
 
-CC = cc
+CC = gcc
 
 FLAGS = -Wall -Werror -Wextra
 
@@ -44,8 +46,8 @@ $(NAME) : $(OBJS)
 %.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
-bonus :
-#	make OBJS="$(OBJS_B)" all
+bonus : $(NAME) $(OBJS_B)
+	ar rcs $(NAME) $?
 
 clean :
 	rm -f $(OBJS) $(OBJS_B)

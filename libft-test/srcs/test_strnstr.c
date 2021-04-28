@@ -6,7 +6,7 @@
 /*   By: lbaela <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/22 08:51:53 by lbaela            #+#    #+#             */
-/*   Updated: 2021/04/27 12:45:10 by lbaela           ###   ########.fr       */
+/*   Updated: 2021/04/28 09:21:56 by lbaela           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -198,6 +198,33 @@ void	test5_strnstr()
     }
 }
 
+void	test6_strnstr()
+{
+    char    *ptr;
+    char    *empty = (char*)"";
+
+    printf("\n**** Test 6 ****\n");
+    ;
+    ptr = ft_strnstr(empty, "coucou", -1);
+    if (ptr)
+    {
+        printf("String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("String not found: %p\n\n", ptr);
+    }
+    ptr = strnstr(empty, "coucou", -1);
+    if (ptr)
+    {
+        printf("String found: %s\nAt %p\n\n", ptr, ptr);
+    }
+    else
+    {
+        printf("String not found: %p\n\n", ptr);
+    }
+}
+
 void	test_strnstr()
 {
 	test1_strnstr();
@@ -205,5 +232,6 @@ void	test_strnstr()
     test3_strnstr();
     //test4_1_strnstr();
     //test4_2_strnstr();
-    test5_strnstr();
+    //test5_strnstr();
+    test6_strnstr();
 }

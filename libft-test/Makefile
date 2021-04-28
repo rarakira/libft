@@ -16,7 +16,7 @@ RM			= rm -f
 all:	libft ${NAME}
 
 libft:
-		cd ../libft && make
+		cd ../libft && make bonus
 
 ${NAME}:${OBJS} ${LIBDIR}/libft.a
 		${CC} ${CFLAGS} ${OBJS} -L${LIBDIR} -l${LIB} -o ${NAME}

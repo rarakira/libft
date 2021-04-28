@@ -41,4 +41,6 @@ void	test_putstr_fd(void);
 void	test_putendl_fd(void);
 void	test_putnbr_fd(void);
 
+void	test_lstnew(void);
+
 #endif
